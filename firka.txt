@@ -1,0 +1,23 @@
+Az MRI képeken a tumorokat általában azok jellemzői alapján azonosítjuk, amelyek eltérnek az egészséges szövetektől. Ezek a jellemzők lehetnek:
+
+Intenzitás és kontraszt:
+A daganatos területek általában eltérő intenzitással és kontraszttal rendelkeznek a környező szövetekhez képest, ami segít elkülöníteni őket.
+
+Textúra:
+A tumor szövet textúrája gyakran eltér az egészséges agyi szövet struktúrájától, így a textúrajellemzők (például homogenitás, éllenyomatok) alapján is megkülönböztethetők.
+
+Morfológiai jellemzők:
+A tumorok alakja és határai szintén eltérőek lehetnek. Például szabálytalan, nem szimmetrikus formák vagy éles határok is árulkodóak lehetnek.
+
+A szegmentáció metódusa manapság leggyakrabban két irányba osztható:
+
+Hagyományos képfeldolgozó technikák:
+
+Thresholding: Az intenzitáskülönbségek alapján történő binarizálás.
+Region Growing: Kezdeti magpont (seed) kiválasztása után a hasonló jellemzőkkel rendelkező pixelek egyesítése.
+Clustering (pl. k-means, fuzzy c-means): Az adatok csoportosítása az intenzitás és textúra alapján.
+Deep learning alapú megközelítések:
+
+Konvolúciós neurális hálózatok (CNN): Például az U-Net architektúra, amely kifejezetten orvosi képek szegmentálására lett tervezve.
+Ezek a modellek megtanulják a releváns jellemzőket (intenzitás, textúra, helyi kontextus) az annotált adatokból, majd pixel-szintű szegmentációt végeznek.
+A deep learning megoldások általában jobb eredményeket adnak, mivel képesek figyelembe venni a komplex, nemlineáris jellemzők kombinációját, ami különösen hasznos az MRI képek esetében, ahol a tumorok és az egészséges szövetek közötti különbségek nem mindig egyértelműek. A folyamat során a modellek tipikusan olyan veszteségfüggvényeket optimalizálnak, mint például a Dice loss vagy a cross-entropy, hogy minél pontosabban elkülönítsék a daganatos területeket.
